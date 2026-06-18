@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hip-report>
+    <!-- I have replaced identifiers here with fake things. -->
+	<md5-sum>df4ceebbf548c202a9a52be20177f2</md5-sum>
+	<user-name>CURRENT_USER</user-name>
+	<domain></domain>
+	<host-name>CURRENT_HOST</host-name>
+	<!--
+	host-id is the real MAC address of en0: `networksetup -getmacaddress en0`
+	-->
+	<host-id>XX:XX:XX:XX:XX:XX</host-id>
+	<!-- I believe this is GlobalProtect's IP, supposedly returned in the /ssl-vpn/getconfig.esp request -->
+	<ip-address>10.130.231.30</ip-address>
+	<ipv6-address></ipv6-address>
+	<generate-time>06/12/2026 13:29:24</generate-time>
+	<hip-report-version>4</hip-report-version>
+	<categories>
+		<entry name="host-info">
+			<client-version>6.2.8-948</client-version>
+			<os>Apple Mac OS X 26.5.1</os>
+			<os-vendor>Apple</os-vendor>
+			<domain></domain>
+			<host-name>waffle</host-name>
+			<host-id>XX:XX:XX:XX:XX:XX</host-id>
+			<network-interface>
+			    <!-- Note that loopback isn't listed here -->
+				<entry name="en3">
+					<description>en3</description>
+					<mac-address>AA:AA:AA:AA:AA:AA</mac-address>
+				</entry>
+				<entry name="en4">
+					<description>en4</description>
+					<mac-address>AA:AA:AA:AA:AA:AA</mac-address>
+				</entry>
+				<entry name="bridge0">
+					<description>bridge0</description>
+					<mac-address>AA:AA:AA:AA:AA:AA</mac-address>
+				</entry>
+				<entry name="en0">
+					<description>en0</description>
+					<mac-address>XX:XX:XX:XX:XX:XX</mac-address>
+					<ip-address>
+						<entry name="192.168.7.35"/>
+					</ip-address>
+					<ipv6-address>
+						<entry name="fe80::c74:60ca:a0c0:6dfe"/>
+					</ipv6-address>
+				</entry>
+				<entry name="en1">
+					<description>en1</description>
+					<mac-address>AA:AA:AA:AA:AA:AA</mac-address>
+				</entry>
+				<entry name="en2">
+					<description>en2</description>
+					<mac-address>AA:AA:AA:AA:AA:AA</mac-address>
+				</entry>
+			</network-interface>
+		</entry>
+		<entry name="anti-malware">
+			<list>
+				<entry>
+					<ProductInfo>
+					    <!--
+						package is in /Library/Apple/System/Library/CoreServices/XProtect.bundle/Contents/Info.plist CFBundleShortVersionString
+						defs are in /Library/Apple/System/Library/CoreServices/XProtect.app/Contents/Info.plist
+
+						version: `plutil -extract CFBundleShortVersionString raw /Library/Apple/System/Library/CoreServices/XProtect.bundle/Contents/Info.plist`
+						defver: `plutil -extract CFBundleShortVersionString raw /Library/Apple/System/Library/CoreServices/XProtect.app/Contents/Info.plist`
+
+						The app one is really XProtect Remediator
+						-->
+						<Prod vendor="Apple Inc." name="Xprotect" version="5347" defver="157" engver="" datemon="2" dateday="18" dateyear="2026" prodType="3" osType="4"/>
+						<real-time-protection>yes</real-time-protection>
+						<last-full-scan-time>n/a</last-full-scan-time>
+					</ProductInfo>
+				</entry>
+				<entry>
+					<ProductInfo>
+						<Prod vendor="Apple Inc." name="Gatekeeper" version="26.5.1" defver="" engver="" datemon="" dateday="" dateyear="" prodType="3" osType="4"/>
+						<real-time-protection>yes</real-time-protection>
+						<last-full-scan-time>n/a</last-full-scan-time>
+					</ProductInfo>
+				</entry>
+				<entry>
+					<ProductInfo>
+						<Prod vendor="Cisco Systems, Inc." name="Cisco Secure Endpoint" version="1.27.0.1046" defver="" engver="1.4.2" datemon="6" dateday="12" dateyear="2026" prodType="3" osType="4"/>
+						<real-time-protection>yes</real-time-protection>
+						<last-full-scan-time>n/a</last-full-scan-time>
+					</ProductInfo>
+				</entry>
+			</list>
+		</entry>
+		<entry name="disk-backup">
+			<list>
+				<entry>
+					<ProductInfo>
+						<Prod vendor="Google Inc." name="Google Drive" version="126.0"/>
+						<last-backup-time>n/a</last-backup-time>
+					</ProductInfo>
+				</entry>
+				<entry>
+					<ProductInfo>
+						<Prod vendor="Apple Inc." name="Time Machine" version="1.3"/>
+						<last-backup-time>n/a</last-backup-time>
+					</ProductInfo>
+				</entry>
+			</list>
+		</entry>
+		<entry name="disk-encryption">
+			<list>
+				<entry>
+					<ProductInfo>
+						<Prod vendor="Apple Inc." name="FileVault" version="26.5.1"/>
+						<drives>
+							<entry>
+								<drive-name>Macintosh HD</drive-name>
+								<enc-state>encrypted</enc-state>
+							</entry>
+							<entry>
+								<drive-name>Data</drive-name>
+								<enc-state>encrypted</enc-state>
+							</entry>
+							<entry>
+								<drive-name>All</drive-name>
+								<enc-state>encrypted</enc-state>
+							</entry>
+						</drives>
+					</ProductInfo>
+				</entry>
+			</list>
+		</entry>
+		<entry name="firewall">
+			<list>
+				<entry>
+					<ProductInfo>
+						<Prod vendor="Apple Inc." name="Mac OS X Builtin Firewall" version="26.5.1"/>
+						<is-enabled>yes</is-enabled>
+					</ProductInfo>
+				</entry>
+				<entry>
+					<ProductInfo>
+						<Prod vendor="OpenBSD" name="Packet Filter" version="26.5.1"/>
+						<is-enabled>no</is-enabled>
+					</ProductInfo>
+				</entry>
+			</list>
+		</entry>
+		<entry name="patch-management">
+			<list>
+				<entry>
+					<ProductInfo>
+						<Prod vendor="VMware, Inc." name="Workspace ONE Intelligent Hub" version=""/>
+						<is-enabled>yes</is-enabled>
+					</ProductInfo>
+				</entry>
+				<entry>
+					<ProductInfo>
+						<Prod vendor="Qualys, Inc." name="Qualys Cloud Security Agent" version="6.3.1-23"/>
+						<is-enabled>n/a</is-enabled>
+					</ProductInfo>
+				</entry>
+				<entry>
+					<ProductInfo>
+						<Prod vendor="Microsoft Corporation" name="Microsoft AutoUpdate" version="4.83"/>
+						<is-enabled>yes</is-enabled>
+					</ProductInfo>
+				</entry>
+				<entry>
+					<ProductInfo>
+						<Prod vendor="Apple Inc." name="Software Update" version="3.0"/>
+						<is-enabled>yes</is-enabled>
+					</ProductInfo>
+				</entry>
+			</list>
+			<missing-patches>
+			</missing-patches>
+		</entry>
+		<entry name="data-loss-prevention">
+			<list>
+			</list>
+		</entry>
+	</categories>
+	<custom-checks>
+		<plist>
+			<entry name="/Applications/QualysCloudAgent.app/Contents/MacOS/com.qualys.cloud.agent-restart.plist">
+				<exist>no</exist>
+				<value></value>
+				<preference-value>
+					<entry name="Label">
+						<exist>no</exist>
+						<value></value>
+					</entry>
+				</preference-value>
+			</entry>
+		</plist>
+	</custom-checks>
+</hip-report>
